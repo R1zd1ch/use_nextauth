@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import NextAuth from 'next-auth';
 import db from '@/lib/db';
 import providers from './auth.config';

@@ -35,16 +35,16 @@ const UserProfile = () => {
       <CardHeader>
         <div className="flex items-center">
           <Avatar className="w-16 h-16">
-            <AvatarImage src={user.image || undefined} />
+            <AvatarImage src={user?.image || undefined} />
             <AvatarFallback className="bg-sky-900 text-white">
-              {user.name.charAt(0).toUpperCase()}
+              {user?.name?.charAt(0).toUpperCase()}
             </AvatarFallback>
           </Avatar>
           <div className="ml-4">
             <CardTitle className="text-xl font-bold text-gray-800 dark:text-gray-200">
-              {user.name}
+              {user?.name}
             </CardTitle>
-            <p className="text-gray-600 dark:text-gray-300">{user.email}</p>
+            <p className="text-gray-600 dark:text-gray-300">{user?.email}</p>
           </div>
         </div>
       </CardHeader>
