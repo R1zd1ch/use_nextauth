@@ -35,9 +35,11 @@ export function NavigationMenuDemo() {
     <div className="mx-4">
       <div className="w-full px-20 flex justify-between items-center p-4 bg-white dark:bg-[hsl(var(--background))] border-b rounded-xl border-gray-200 dark:border-gray-700 shadow-lg shadow-black/10">
         {/* App Name */}
-        <div className="text-xl font-bold text-gray-800 dark:text-[hsl(var(--foreground))]">
-          myApp
-        </div>
+        <Link href={'/'}>
+          <div className="text-xl font-bold text-gray-800 dark:text-[hsl(var(--foreground))]">
+            myApp
+          </div>
+        </Link>
 
         {/* Navigation Menu */}
         <NavigationMenu>
@@ -92,9 +94,9 @@ export function NavigationMenuDemo() {
                     </div>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="center" side="bottom" className="w-50">
-                    <DropdownMenuItem className="h-10" onClick={handleSignOut}>
-                      Профиль
-                    </DropdownMenuItem>
+                    <Link href={'/profile'}>
+                      <DropdownMenuItem className="h-10">Профиль</DropdownMenuItem>
+                    </Link>
                     <DropdownMenuItem className="h-10" onClick={handleSignOut}>
                       Выход
                     </DropdownMenuItem>

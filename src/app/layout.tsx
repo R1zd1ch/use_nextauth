@@ -4,6 +4,7 @@ import './globals.css';
 import NavBar from '@/components/NavBar';
 import { Toaster } from '@/components/ui/sonner';
 import { Providers } from '@/lib/providers';
+import Footer from '@/components/Footer';
 // import { ThemeProvider } from '@/lib/theme-provider';
 
 const geistSans = localFont({
@@ -29,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased `}
+      >
         {/* <ThemeProvider
           enableSystem
           attribute="class"
@@ -43,7 +46,9 @@ export default function RootLayout({
           <NavBar />
           {/* <SideBar /> */}
           {/* <SidebarTrigger /> */}
-          {children}
+          <main className="flex-grow">{children}</main>
+
+          <Footer />
           {/* </SidebarProvider> */}
         </Providers>
         {/* </ThemeProvider> */}
